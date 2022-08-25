@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    """Sum all the arguements"""
+    """Print the addition of all arguments."""
     import sys
 
-    sum = 0
-    count = len(sys.argv) - 1
-    if count == 0:
-        print("0")
-    else:
-        for i in range(count):
-            sum = sum + int(sys.argv[i +1])
-        print("{}".format(sum))
+    totalsum = 0
+    for i in range(len(sys.argv) - 1):
+        totalsum += int(sys.argv[i + 1])
+    print("{}".format(totalsum))
