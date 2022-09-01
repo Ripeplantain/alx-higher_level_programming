@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    return list(map(lambda x: x**2, matrix))
+    temporary = []
+    for x in matrix:
+        temporary.append(list(map(lambda x: x**2,x)))
+    return temporary
