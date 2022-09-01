@@ -4,4 +4,4 @@ def number_keys(a_dictionary):
     list_dict = list(a_dictionary.keys())
     for i in list_dict:
         count += 1
-    return "Number of keys: {}".format(count)    
+    return count    
