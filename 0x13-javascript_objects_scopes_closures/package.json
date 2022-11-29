@@ -1,0 +1,14 @@
+{
+  "name": "javascript_object",
+  "version": "1.0.0",
+  "description": "This is for my alx assigment",
+  "main": "0-rectangle.js",
+  "scripts": {
+    "test": "semistandard && node my-normal-tests-littered-with-semicolons.js"
+  },
+  "author": "Montanna",
+  "license": "ISC",
+  "dependencies": {
+    "standard": "^17.0.0"
+  }
+}
