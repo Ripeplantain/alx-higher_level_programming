@@ -1,21 +1,25 @@
 #!/usr/bin/python3
 """
-Adds state to the database
+Insert State with City
 """
 
 import sys
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from relationship_state import Base, State
+from relationship_city import City
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(sys.argv[0], sys.argv[1], sys.argv[2],sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state1 = State(name="Louisiana")
-    session.add(state1)
-    session.commit()
+    newState = State('name=California')
+    newCity = City('name=San Francisco')
+    newState.cities.append(newCity)
 
-    print(state1.id)
+    session.add(newState)
+    session.add(newCity)
+    session.commit()
+    session.close()
