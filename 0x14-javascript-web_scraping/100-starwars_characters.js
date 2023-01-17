@@ -7,7 +7,7 @@ const url = `https://swapi.dev/api/films/${movieId}/`;
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
     return;
   }
 

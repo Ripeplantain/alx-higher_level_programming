@@ -7,7 +7,7 @@ let count = 0;
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
   } else {
     const data = JSON.parse(body);
     data.results.forEach((film) => {
